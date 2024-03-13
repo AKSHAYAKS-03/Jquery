@@ -1,0 +1,32 @@
+<!--Create a hover effect on an element where it changes its opacity using jQuer-->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("p").hover(
+  function(){
+  $("p").css('opacity','0.5');
+},
+function(){
+    $("p").css('opacity', '1');
+})
+  
+});
+</script>
+</head>
+<body>
+  <style>
+    #opac{
+      margin: 100px;
+      padding: 50px;
+    }
+  
+    
+  </style>
+<div id="opac">
+ <p>Hover over me to see magic!</p>
+</div>
+</body>
+</html>
