@@ -1,0 +1,61 @@
+<!--Create two textboxes and one button with + on it. On click of the button you should
+display sum of the two entered numbers in textbox. Similarly add Subtract, Multiple and
+Division buttons-->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#add").click(function(){
+    var n1 = parseInt($("#ip1").val());
+    var n2 = parseInt($("#ip2").val());
+    $("#op").val(n1 + n2);
+  });
+
+  $("#subtract").click(function(){
+    var n1 = parseInt($("#ip1").val());
+    var n2 = parseInt($("#ip2").val());
+    $("#op").val(n1 - n2);
+  });
+
+  $("#multiply").click(function(){
+    var n1 = parseInt($("#ip1").val());
+    var n2 = parseInt($("#ip2").val());
+    $("#op").val(n1 * n2);
+  });
+
+  $("#divide").click(function(){
+    var n1 = parseInt($("#ip1").val());
+    var n2 = parseInt($("#ip2").val());
+    $("#op").val(n1 / n2);
+  });
+});
+</script>
+</head>
+<body>
+  <style>
+    #cal{
+      margin: 20px;
+    }
+    #ip1, #ip2, #op{
+      margin: 10px;
+    }
+    #op{
+      margin-left: 115px;
+    }
+    button {
+      margin: 10px;
+    }
+  </style>
+<div id="cal">
+  Enter a number: <input type="text" id="ip1"><br>
+  Enter a number: <input type="text" id="ip2">
+  <input type="text" id="op"><br>
+  <button type="button" id="add">+</button>
+  <button type="button" id="subtract">-</button>
+  <button type="button" id="multiply">*</button>
+  <button type="button" id="divide">/</button>
+</div>
+</body>
+</html>
