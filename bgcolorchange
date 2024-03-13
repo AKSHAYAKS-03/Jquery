@@ -1,0 +1,24 @@
+<!--Create a button that changes the background color of a div when clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  var clrs = ["yellow","blue","green","red","grey"];
+  var i =0;
+  $("button").click(function(){
+    $("body").css("background-color", clrs[i]);
+    i = (i+1)%clrs.length;
+  });
+});
+</script>
+</head>
+<body>
+
+<center><button type="button" id="cc">changecolor</button></center>
+
+<p id="demo"></p>
+
+</body>
+</html> 
